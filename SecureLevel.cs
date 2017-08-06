@@ -1,10 +1,10 @@
 namespace Logger {
 	enum SecureLevel {
-		ALL = 0b11,
+		ALL = 0x11,
 
-		SEE_ONLY = 0b01,
-		SET_ONLY = 0b10,
+		SEE_ONLY = 0x01,
+		SET_ONLY = 0x10,
 
-		NONE = 0b00
+		NONE = 0x00
 	}
 }
