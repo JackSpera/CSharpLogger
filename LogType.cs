@@ -1,10 +1,23 @@
 namespace Logger {
-	enum LogType {
-		INFO = 0x0,
-		WARN = 0x1,
-		ERROR = 0x2,
-		SEVERE = 0x3,
+	public class LogType {
+		public LogTypeEnum Type;
 
-		CUSTOM = 0xF
+		public string CustomName;
+
+		public LogType(LogTypeEnum type) {
+			this.Type = type;
+		}
+
+		public LogType(string custonName) {
+			this.Type = LogTypeEnum.CUSTOM;
+			this.CustomName = custonName;
+		}
+
+		public override string ToString() {
+			if(Type == LogTypeEnum.CUSTOM)
+				return CustomName;
+
+			return Type.ToString();
+		}
 	}
 }
