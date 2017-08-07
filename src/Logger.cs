@@ -1,6 +1,6 @@
 namespace Logging {
 	public class Logger {
-		private LogFile File;
+		public LogFile File;
 
 		public Logger(string filePath, SecureLevel lockLevel=SecureLevel.SEE_ONLY, bool useExtension=true) {
 			this.File = new LogFile(filePath, lockLevel, useExtension);
