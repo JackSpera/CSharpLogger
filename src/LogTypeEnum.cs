@@ -1,4 +1,4 @@
-namespace Logger {
+namespace Logging {
 	public enum LogTypeEnum {
 		INFO = 0x0,
 		WARN = 0x1,

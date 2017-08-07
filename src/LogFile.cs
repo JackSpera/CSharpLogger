@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using System.IO;
 
-namespace Logger {
-	class LogFile {
+namespace Logging {
+	public class LogFile {
 		public string FilePath = "";
 
 		public char OpenBracket = '[';
@@ -9,32 +10,53 @@ namespace Logger {
 
 		private SecureLevel Lock;
 
+		private bool UseExtension = true;
+
+
+
+		private List<Log> _Data;
 		public List<Log> Data {
-			get{
+			get {
 				if (Lock == SecureLevel.SEE_ONLY || Lock == SecureLevel.ALL)
-					return Data;	
+					return _Data;	
 
 				return null;
 			}
 
 
-
-			set{
+			set {
 				if (Lock == SecureLevel.SET_ONLY || Lock == SecureLevel.ALL)
-					Data = value;
+					_Data = value;
 
 				return;
 			}
+
+		}
+		// "{Parent.OpenBracket}{Date}{Parent.CloseBracket}{Parent.OpenBracket}{LogType}{Parent.CloseBracket}{Data}";
+		// ||
+		// \/
+		// "{0}{2}{1}{0}{3}{1}{4}"
+		public string Format = "{0}{2}{1}{0}{3}{1} {4}";
+
+
+		public LogFile(string filePath, SecureLevel lockLevel, bool useExtension){
+		this.FilePath = filePath;     this.Lock = lockLevel;
+		this.UseExtension = useExtension;
+
+			this._Data = new List<Log>();
+
 		}
 
-		public string Format = "{Parent.OpenBracket}{Date}{Parent.CloseBracket}{Parent.OpenBracket}{LogType}{Parent.CloseBracket}{Data}";
+
+		public void Write(LogType type, string data) {
+			Log log = new Log(this, type, data);
+
+			using(StreamWriter stream = new StreamWriter(FilePath + (UseExtension ? ".log" : ""), true)) {
+				stream.WriteLine(log.ToString());
+			}
 
 
-		public LogFile(string filePath, SecureLevel lockLevel=SecureLevel.SEE_ONLY){
-			this.FilePath = filePath;
-			this.Lock = lockLevel;
-
-			this.Data = new List<Log>();
+			_Data.Add(log);
 		}
 	}
 }

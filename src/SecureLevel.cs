@@ -1,5 +1,5 @@
-namespace Logger {
-	enum SecureLevel {
+namespace Logging {
+	public enum SecureLevel {
 		ALL = 0x11,
 
 		SEE_ONLY = 0x01,

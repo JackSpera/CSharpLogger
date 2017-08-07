@@ -1,4 +1,4 @@
-namespace Logger {
+namespace Logging {
 	public class LogType {
 		public LogTypeEnum Type;
 
