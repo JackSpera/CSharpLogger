@@ -6,6 +6,7 @@ namespace Logging {
 			this.File = new LogFile(filePath, lockLevel, useExtension);
 		}
 
+		public void Debug(string data) => File.Write(new LogType(LogTypeEnum.DEBUG), data);
 		public void Info(string data) => File.Write(new LogType(LogTypeEnum.INFO), data);
 
 		public void Warn(string data) => File.Write(new LogType(LogTypeEnum.WARN), data);
