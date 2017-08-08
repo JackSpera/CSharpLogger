@@ -1,8 +1,10 @@
 using Logging;
 
-class Test1 {
+class TestCustomFormat {
     public static void Main(string[] argv) {
-        Logger logger = new Logger("Test.1");
+        Logger logger = new Logger("Test.CustomFormat");
+        logger.Format = "{3}: {4}";
+
         logger.Debug("Debugghiamo");
         logger.Info("Testiamo");
         logger.Warn("Warniamo");
