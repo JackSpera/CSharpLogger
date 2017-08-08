@@ -1,0 +1,8 @@
+[08/08/2017 17:23:53][DEBUG] Debugghiamo
+[08/08/2017 17:23:53][INFO] Testiamo
+[08/08/2017 17:23:53][WARN] Warniamo
+[08/08/2017 17:23:53][ERROR] Oh Noes
+[08/08/2017 17:23:53][SEVERE] Non Siamo troppo Severi
+[08/08/2017 17:23:53][TAG] Custom Tag
+[08/08/2017 17:23:53][INFO] Can we see Logs??
+[08/08/2017 17:23:53][ERROR] No, we can't

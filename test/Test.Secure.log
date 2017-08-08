@@ -1,0 +1,16 @@
+[08/08/2017 17:23:47][DEBUG] Debugghiamo
+[08/08/2017 17:23:47][INFO] Testiamo
+[08/08/2017 17:23:47][WARN] Warniamo
+[08/08/2017 17:23:47][ERROR] Oh Noes
+[08/08/2017 17:23:47][SEVERE] Non Siamo troppo Severi
+[08/08/2017 17:23:47][TAG] Custom Tag
+[08/08/2017 17:23:47][INFO] Can we see Logs??
+[08/08/2017 17:23:47][SUCCESS] Yeah, We can
+[08/08/2017 17:23:47][INFO] [08/08/2017 17:23:47][DEBUG] Debugghiamo
+	[08/08/2017 17:23:47][INFO] Testiamo
+	[08/08/2017 17:23:47][WARN] Warniamo
+	[08/08/2017 17:23:47][ERROR] Oh Noes
+	[08/08/2017 17:23:47][SEVERE] Non Siamo troppo Severi
+	[08/08/2017 17:23:47][TAG] Custom Tag
+	[08/08/2017 17:23:47][INFO] Can we see Logs??
+	[08/08/2017 17:23:47][SUCCESS] Yeah, We can
