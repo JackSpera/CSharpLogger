@@ -65,6 +65,11 @@ Parameters are:
  * 3: Log Tag  
  * 4: The Text  
 
+## Next Steps
+Next Steps for this Project are:
+ * Saving Logs to DataBase
+ * Logs more Secure
+ * Custom Format more Easily
 
 
 ## How To Compile
